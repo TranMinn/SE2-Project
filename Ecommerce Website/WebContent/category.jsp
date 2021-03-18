@@ -47,7 +47,7 @@
 					<a href="#!">
 						<img src="images/shop/category/category-1.jpg" alt="" />
 						<div class="content">
-							<h3>Clothes Sales</h3>
+							<h3>Dresses</h3>
 							<p>Shop New Season Clothing</p>
 						</div>
 					</a>	
@@ -56,7 +56,7 @@
 					<a href="#!">
 						<img src="images/shop/category/category-2.jpg" alt="" />
 						<div class="content">
-							<h3>Smart Casuals</h3>
+							<h3>Shoes</h3>
 							<p>Get Wide Range Selection</p>
 						</div>
 					</a>	
