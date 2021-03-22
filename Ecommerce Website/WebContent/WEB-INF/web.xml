@@ -3,7 +3,7 @@
   <display-name>FashionShop</display-name>
   
     <welcome-file-list>
-    <welcome-file></welcome-file>
+    <welcome-file>welcome</welcome-file>
   </welcome-file-list>
   
   
