@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class JDBCConnection {
-	private static String DB_URL = "jdbc:mysql://localhost:3306/test2?useSSL=false";
+	private static String DB_URL = "jdbc:mysql://localhost:3306/ashion_db?useSSL=false";
     private static String DB_USERNAME = "root";
     private static String DB_PASSWORD = "";
 	
