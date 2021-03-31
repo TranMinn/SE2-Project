@@ -132,16 +132,26 @@
 						</form>
 					</div>
 				</div>
+
 				<div class="col-lg-4 offset-lg-2">
 					<div class="cart__total__procced">
 						<h6>Cart total</h6>
 						<ul>
-							<li>Subtotal <span>$ 750.0</span></li>
-							<li>Total <span>$ 750.0</span></li>
+							<li>Subtotal <c:set var="total" value="${0}" /> <c:forEach
+									items="${sessionScope.cart}" var="map">
+									<c:set var="total"
+										value="${total + map.value.quantity * map.value.product.price}" />
+								</c:forEach>
+								<div class="total-result-in">
+
+									<span>$ ${total }</span></li>
+									
+							<li>Total <span>$ ${total }</span></li>
 						</ul>
 						<a href="#" class="primary-btn">Proceed to checkout</a>
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</section>

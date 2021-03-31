@@ -79,26 +79,34 @@
 						<p>${product.des }</p>
 
 						<div class="product__details__button">
-
-
+						
 							<form name="f1" method="get"
 								action="<c:url value="/member/cart/add"></c:url>">
+								
+								<input type="text" value="${product.id }" name="pId" hidden="">
 
 								<div class="quantity">
 									<span>Quantity:</span>
-									<div class="pro-qty">
-										<span class="dec qtybtn" value="-">-</span> 
-										<input type="text"
-											value="1" id='qty'> 
-											<span class="inc qtybtn"
-											value="+">+</span>
-									</div>
+									
+									<span>
+									
+										<button type='button' class="dec qtybtn" name='subtract' value='-' onclick='javascript: document.getElementById("qty").value--;'>-</button> 
+										
+										<input type="text" value="1" name='quantity' id='qty'> 
+										
+										<button type='button' class="inc qtybtn" name='add' value='+' onclick='javascript: document.getElementById("qty").value++;'>+</button>
+										
+									</span>
+									
+									<button type="submit" class="cart-btn">
+									<span class="icon_bag_alt"></span> Add to cart</button>
+								
 								</div>
 
-								<button type="submit" class="cart-btn">
-									<span class="icon_bag_alt"></span> Add to cart
-								</button>
+								
 							</form>
+
+
 
 							<ul>
 								<li><a href="#"><span class="icon_heart_alt"></span></a></li>
@@ -207,6 +215,7 @@
 					</div>
 				</div>
 			</div>
+			
 			<div class="row">
 				<div class="col-lg-12 text-center">
 					<div class="related__title">

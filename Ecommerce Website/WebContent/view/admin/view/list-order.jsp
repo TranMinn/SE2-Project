@@ -7,7 +7,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Product Management</title>
+<title>Order Management</title>
 <!-- BOOTSTRAP STYLES-->
 <link href="${url}/css/bootstrap.css" rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->
@@ -35,8 +35,8 @@
 			<div id="page-inner">
 				<div class="row">
 					<div class="col-md-12">
-						<h2>All Product</h2>
-						<h5>You can management product in here</h5>
+						<h2>Order Management</h2>
+
 
 					</div>
 				</div>
@@ -54,39 +54,44 @@
 										id="dataTables-example">
 										<thead>
 											<tr>
-												<th>ID </th>
-												<th>Image</th>
-												<th>Name</th>
-												<th>Price($)</th>
-												<th>Category</th>
-												<th>Description</th>
-												<th>Action </th>
+												<th>index</th>
+												<th>ID</th>
+												<th>Buyer</th>
+												<th>Email</th>
+												<th>Date</th>
+												<th>Product</th>
+												<th>Quantity</th>
+												<th>Price</th>
+												<th>Sum</th>
+												<th>Action</th>
+
+
 											</tr>
 										</thead>
 										<tbody>
-										<c:forEach items="${proList }" var="pro" >
-											<tr class="odd gradeX">
-												<td>${pro.id }</td>
-													<c:url value="/image?fname=${pro.image }" var="imgUrl"></c:url>
-													<td><img height="150" width="200" src="${imgUrl}" /></td>
+											</a>
+											<c:set var="index" value="${0}" />
+											<c:forEach items="${listCartItem }" var="list">
+												<tr class="odd gradeX">
+													<c:set var="index" value="${index + 1}" />
+													<td>${index }</td>
+													<td>${list.id }</td>
+													<td>${list.cart.buyer.username }</td>
+													<td>${list.cart.buyer.email }</td>
+													<td>${list.cart.buyDate }</td>
+													<td>${list.product.name }</td>
+													<td>${list.quantity }</td>
+													<td>$ ${list.product.price }</td>
+													<td>$ ${ list.quantity * list.product.price }</td>
 
-													<td>${pro.name }</td>
-												<td>${pro.price }</td>
-												<td>${pro.category.name }</td>
-												<td>${pro.des } </td>
-												<td><a
-														href="<c:url value='/product/detail?id=${pro.id }'/>"
-														class="center">Detail</a> | <a
-														href="<c:url value='/admin/product/edit?id=${pro.id }'/>"
-														class="center">Edit</a>
-														| <a
-														href="<c:url value='/admin/product/delete?id=${pro.id }'/>"
+
+													<td><a
+														href="<c:url value='/admin/order/delete?id=${list.id }'/>"
 														class="center">Delete</a></td>
-												
-											</tr>
+
+												</tr>
 											</c:forEach>
-											
-											
+
 										</tbody>
 									</table>
 								</div>
