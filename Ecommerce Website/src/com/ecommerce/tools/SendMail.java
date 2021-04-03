@@ -37,4 +37,9 @@ public class SendMail {
         }
         return true;
 }
+	
+//	public static void main(String[] args) {
+//		sendMail("mintt2708@gmail.com", "Hello", "Hello");
+//		System.out.println("Sent");
+//	}
 }

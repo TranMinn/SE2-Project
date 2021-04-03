@@ -33,7 +33,7 @@
 <link rel="stylesheet" href="${url}/css/slicknav.min.css"
 	type="text/css">
 <link rel="stylesheet" href="${url}/css/style.css" type="text/css">
-<title>Shop</title>
+<title>Search by Name</title>
 </head>
 <body>
 
@@ -59,7 +59,7 @@
     </div>
     <!-- Breadcrumb End -->
     
-    <!-- Shop Section Begin -->
+    <!-- Filter Section Begin -->
     <section class="shop spad">
         <div class="container">
             <div class="row">
@@ -71,7 +71,7 @@
                     <div class="row">
                     
                     
-                    <c:forEach items="${productList }" var="p" >						
+                    <c:forEach items="${productSeachByName }" var="p" >						
 							<c:url value="/image?fname=${p.image }" var="imgUrl"></c:url>
                        
                         <div class="col-lg-4 col-md-6">
@@ -113,15 +113,11 @@
             </div>
         </div>
     </section>
-    <!-- Shop Section End -->
-	
-	
-	
-	
+    <!-- Filter Section End -->
 	
 	<jsp:include page="/view/client/view/others.jsp"></jsp:include>
 
 	<jsp:include page="/view/client/view/footer.jsp"></jsp:include>
-	
+
 </body>
 </html>

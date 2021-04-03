@@ -51,7 +51,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="breadcrumb__links">
-						<a href="./index.html"><i class="fa fa-home"></i> Home</a> <span>Shopping
+						<a href="${pageContext.request.contextPath }"><i class="fa fa-home"></i> Home</a> <span>Shopping
 							cart</span>
 					</div>
 				</div>
@@ -127,7 +127,7 @@
 					<div class="discount__content">
 						<h6>Discount codes</h6>
 						<form action="#">
-							<input type="text" placeholder="Enter your coupon code">
+							<input type="text" name = "discount" placeholder="Enter your coupon code">
 							<button type="submit" class="site-btn">Apply</button>
 						</form>
 					</div>
@@ -148,7 +148,7 @@
 									
 							<li>Total <span>$ ${total }</span></li>
 						</ul>
-						<a href="#" class="primary-btn">Proceed to checkout</a>
+						<a href="${pageContext.request.contextPath }/member/order" class="primary-btn">Proceed to checkout</a>
 					</div>
 				</div>
 
