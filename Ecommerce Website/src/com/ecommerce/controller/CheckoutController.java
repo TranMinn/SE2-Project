@@ -50,8 +50,6 @@ public class CheckoutController extends HttpServlet {
 			for (CartItem cartItem : map.values()) {
 				cartItem.setCart(cart);
 				cartItem.setId(RandomUUID.getRandomID());
-				SendMail sm = new SendMail();
-				sm.sendMail(cart.getBuyer().getEmail(), "ASHION", " Email! ");
 				cartItemService.insert(cartItem);
 				
 			}

@@ -72,7 +72,7 @@
 					</h6>
 				</div>
 			</div>
-			<form action="OrderController" method = "post" class="checkout__form">
+			<form action="" class="checkout__form">
 				<div class="row">
 					<div class="col-lg-8">
 						<h5>Billing detail</h5>
@@ -99,7 +99,7 @@
 									<p>
 										Address <span>*</span>
 									</p>
-									<input type="text" placeholder="Street Address">
+									<input type="text" name = "address" placeholder="Address">
 								</div>
 
 							</div>
@@ -153,7 +153,7 @@
 									id="paypal"> <span class="checkmark"></span>
 								</label>
 							</div>
-							<button type="submit" class="site-btn">Place oder</button>
+							<a href="${pageContext.request.contextPath }/member/checkout" class="primary-btn">Proceed to checkout</a>
 						</div>
 					</div>
 				</div>
