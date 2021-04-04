@@ -75,11 +75,11 @@ public class MyAccountController extends HttpServlet {
 			HttpSession session = req.getSession(true);
 			 session.setAttribute("account", u);
 
-			resp.sendRedirect(req.getContextPath() + "/member/myaccount");
+			 resp.sendRedirect(req.getContextPath()+"/waiting");
 		} catch (FileUploadException e) {
 			e.printStackTrace();
 		} catch (Exception e) {
-			resp.sendRedirect(req.getContextPath() + "/member/myaccount");
+			resp.sendRedirect(req.getContextPath()+"/waiting");
 		}
 
 	}
