@@ -29,5 +29,6 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Java Mail/mailapi.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Java Mail/pop3.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Java Mail/smtp.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/javax.mail-api-1.6.2.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
