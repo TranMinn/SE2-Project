@@ -17,15 +17,15 @@ public class CategoryAddController extends HttpServlet {
 	CategoryService cateService = new CategoryServiceImpl();
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/category/add-category.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/view/add-category.jsp");
 		dispatcher.forward(req, resp);
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String name = req.getParameter("name");
+		String namee = req.getParameter("cate_name");
 		Category category = new Category();
-		category.setName(name);
+		category.setName(namee);
 		cateService.insert(category);
 
 		resp.sendRedirect(req.getContextPath() + "/admin/category/list");

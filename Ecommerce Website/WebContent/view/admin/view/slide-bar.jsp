@@ -31,27 +31,26 @@
 			<li><a
 				href="${pageContext.request.contextPath }/admin/order/list"><i
 					class="fa fa-bar-chart-o fa-3x"></i> Order Management</a></li>
-			<li><a href="table.html"><i class="fa fa-table fa-3x"></i>
-					Table Examples</a></li>
-			<li><a href="form.html"><i class="fa fa-edit fa-3x"></i>
-					Forms </a></li>
+					
+				<li><a
+				href="${pageContext.request.contextPath }/admin/category/list"><i
+					class="fa fa-table fa-3x"></i> CATEGORY Management</a>
+					<ul class="nav nav-second-level">
+					<li><a href="${pageContext.request.contextPath }/admin/category/add">Add New Category</a></li>
+					<li><a href="${pageContext.request.contextPath }/admin/category/list">List All Categories</a></li>
+				</ul>
+					</li>	
+					
+			<li><a
+				href="${pageContext.request.contextPath }/admin/voucher/list"><i
+					class="fa fa-edit fa-3x"></i> VOUCHER Management</a>
+					<ul class="nav nav-second-level">
+					<li><a href="${pageContext.request.contextPath }/admin/voucher/add">Add New Voucher</a></li>
+					<li><a href="${pageContext.request.contextPath }/admin/voucher/list">List All Vouchers</a></li>
+				</ul>
+					</li>
+					
 
-
-			<li><a href="#"><i class="fa fa-sitemap fa-3x"></i>
-					Multi-Level Dropdown<span class="fa arrow"></span></a>
-				<ul class="nav nav-second-level">
-					<li><a href="#">Second Level Link</a></li>
-					<li><a href="#">Second Level Link</a></li>
-					<li><a href="#">Second Level Link<span class="fa arrow"></span></a>
-						<ul class="nav nav-third-level">
-							<li><a href="#">Third Level Link</a></li>
-							<li><a href="#">Third Level Link</a></li>
-							<li><a href="#">Third Level Link</a></li>
-
-						</ul></li>
-				</ul></li>
-			<li><a href="blank.html"><i class="fa fa-square-o fa-3x"></i>
-					Blank Page</a></li>
 		</ul>
 
 	</div>

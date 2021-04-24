@@ -30,31 +30,31 @@
 				<div class="accordion" id="accordionExample">
 					<div class="card">
 						<div class="card-heading active">
-							<a data-toggle="collapse" data-target="#collapseOne">Women</a>
+							<a href = "${pageContext.request.contextPath }/product/category?cate_id=1">Women</a>
 						</div>
 					</div>
 
 					<div class="card">
 						<div class="card-heading">
-							<a data-toggle="collapse" data-target="#collapseTwo">Men</a>
+							<a href = "${pageContext.request.contextPath }/product/category?cate_id=2">Men</a>
 						</div>
 					</div>
 
 					<div class="card">
 						<div class="card-heading">
-							<a data-toggle="collapse" data-target="#collapseThree">Kids</a>
+							<a href = "${pageContext.request.contextPath }/product/category?cate_id=3">Kids</a>
 						</div>
 					</div>
 
 					<div class="card">
 						<div class="card-heading">
-							<a data-toggle="collapse" data-target="#collapseFour">Accessories</a>
+							<a href = "${pageContext.request.contextPath }/product/category?cate_id=5">Accessories</a>
 						</div>
 					</div>
 
 					<div class="card">
 						<div class="card-heading">
-							<a data-toggle="collapse" data-target="#collapseFive">Cosmetic</a>
+							<a href = "${pageContext.request.contextPath }/product/category?cate_id=4">Cosmetic</a>
 						</div>
 					</div>
 				</div>

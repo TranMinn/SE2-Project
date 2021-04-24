@@ -5,9 +5,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="<c:url value="/ckeditor/ckeditor.js" />"></script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Add new User</title>
+<title>Add Category</title>
 <!-- BOOTSTRAP STYLES-->
 <link href="${url}/css/bootstrap.css" rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->
@@ -28,8 +29,8 @@
 			<div id="page-inner">
 				<div class="row">
 					<div class="col-md-12">
-						<h2>Add new User</h2>
-						<h5>You can edit info user in here</h5>
+						<h2>Add Category</h2>
+						<h5>Add new Category</h5>
 					</div>
 				</div>
 				<!-- /. ROW  -->
@@ -38,42 +39,22 @@
 					<div class="col-md-12">
 						<!-- Form Elements -->
 						<div class="panel panel-default">
-							<div class="panel-heading">Add User</div>
+							<div class="panel-heading">Add Category</div>
 							<div class="panel-body">
 								<div class="row">
 									<div class="col-md-6">
-										<h3>User:</h3>
-										
-										<form role="form" action="add"  method="post" enctype="multipart/form-data">
+										<h3>Info Category:</h3>
+
+										<form role="form" action="add" method="post">
 											<div class="form-group">
-												<label>User Name:</label> <input class="form-control"
-													placeholder="please enter username" name="username" />
+												<label>Name:</label> 
+												<input class="form-control"
+												name="cate_name" placeholder="please enter Category Name"/>
 											</div>
-											<div class="form-group">
-												<label>Password</label> <input class="form-control"
-													placeholder="please enter password" type="password"
-													name="password" />
-											</div>
-											<div class="form-group">
-												<label>Email:</label> <input class="form-control"
-													placeholder="Please enter email" name="email" />
-											</div>
-											<div class="form-group">
-												<label>Role</label>
-												<div class="checkbox">
-													<label> <input type="radio" value="1" name="role"/>Admin
-													</label>
-													<br>
-													<label> <input type="radio" value="2" name="role" />Client
-													</label>
-												</div>
-												
-											</div>
-											<div class="form-group">
-												<label>Avatar</label> <input type="file" name="avatar" />
-											</div>
+											
 											<button type="submit" class="btn btn-default">Add</button>
 											<button type="reset" class="btn btn-primary">Reset</button>
+											
 										</form>
 
 
@@ -104,6 +85,8 @@
 	<script src="${url}/js/jquery.metisMenu.js"></script>
 	<!-- CUSTOM SCRIPTS -->
 	<script src="${url}/js/custom.js"></script>
-
+<script type="text/javascript" language="javascript">
+   CKEDITOR.replace('editer', {width: '700px',height: '300px'});
+</script>
 </body>
 </html>

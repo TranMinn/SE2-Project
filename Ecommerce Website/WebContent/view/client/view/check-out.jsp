@@ -52,7 +52,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="breadcrumb__links">
-						<a href="./index.html"><i class="fa fa-home"></i> Home</a> <span>Shopping
+						<a href="${pageContext.request.contextPath }"><i class="fa fa-home"></i> Home</a> <span>Shopping
 							cart</span>
 					</div>
 				</div>
@@ -72,7 +72,7 @@
 					</h6>
 				</div>
 			</div>
-			<form action="" class="checkout__form">
+			<form action="VoucherController" method = "post" class="checkout__form">
 				<div class="row">
 					<div class="col-lg-8">
 						<h5>Billing detail</h5>
@@ -99,7 +99,7 @@
 									<p>
 										Address <span>*</span>
 									</p>
-									<input type="text" name = "address" placeholder="Address">
+									<input type="text" name="address" placeholder="Address">
 								</div>
 
 							</div>
@@ -121,31 +121,53 @@
 										placeholder="Note about your order, e.g, special noe for delivery">
 								</div>
 							</div>
+
+							<!--  -->
+
+							<div class="col-lg-6">
+								<div class="discount__content">
+									<h6>Discount codes</h6>
+
+									<input type="text" name="code"
+										placeholder="Enter your coupon code">
+									<button type="submit" class="site-btn">Apply</button>
+
+								</div>
+							</div>
+
+							<!--  -->
 						</div>
 					</div>
 					<div class="col-lg-4">
 						<div class="checkout__order">
 							<h5>Your order</h5>
-							<div class="checkout__order__total">
-								<ul>
-									<li>Subtotal <c:set var="total" value="${0}" /> <c:forEach
-											items="${sessionScope.cart}" var="map">
-											<c:set var="total"
-												value="${total + map.value.quantity * map.value.product.price}" />
-										</c:forEach>
-										<div class="total-result-in">
 
-											<span>$ ${total }</span></li>
 
-									<li>Total <span>$ ${total }</span></li>
-								</ul>
-							</div>
+								<div class="checkout__order__total">
+									<ul>
+										<li>Subtotal <c:set var="total" value="${0}" /> 
+										<c:forEach
+												items="${sessionScope.cart}" var="map">
+												<c:set var="total"
+													value="${total + map.value.quantity * map.value.product.price}" />
+											</c:forEach>
+											<div class="total-result-in">
+
+												<span>$ ${total }</span></li>
+
+										<li>Total <span>$ ${total }</span></li>
+									</ul>
+								</div>
+
+
 							<div class="checkout__order__widget">
+
 								<label for="o-acc"> Create an acount? <input
 									type="checkbox" id="o-acc"> <span class="checkmark"></span>
 								</label>
 								<p>Create am acount by entering the information below. If
 									you are a returing customer login at the top of the page.</p>
+
 								<label for="check-payment"> Cheque payment <input
 									type="checkbox" id="check-payment"> <span
 									class="checkmark"></span>
@@ -153,7 +175,8 @@
 									id="paypal"> <span class="checkmark"></span>
 								</label>
 							</div>
-							<a href="${pageContext.request.contextPath }/member/checkout" class="primary-btn">Proceed to checkout</a>
+							<a href="${pageContext.request.contextPath }/member/checkout"
+								class="primary-btn">Proceed to checkout</a>
 						</div>
 					</div>
 				</div>

@@ -8,7 +8,7 @@
 <script src="<c:url value="/ckeditor/ckeditor.js" />"></script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Edit User</title>
+<title>Add Product</title>
 <!-- BOOTSTRAP STYLES-->
 <link href="${url}/css/bootstrap.css" rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->

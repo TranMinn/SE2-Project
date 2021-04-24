@@ -2,6 +2,7 @@ package com.ecommerce.controller;
 
 import java.io.IOException;
 import java.io.Serializable;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
@@ -27,6 +28,7 @@ public class OrderController extends HttpServlet implements Serializable {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		HttpSession session = req.getSession();
+
 		Object objCart = session.getAttribute("cart");
 		if (objCart != null) {
 			@SuppressWarnings("unchecked")

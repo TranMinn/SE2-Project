@@ -32,10 +32,10 @@
 											Cart</a></li>
 									<li><a
 										href="${pageContext.request.contextPath }/member/order">Checkout</a></li>
-									<li><a href="./blog-details.html">Blog Details</a></li>
+									<li><a href="${pageContext.request.contextPath }/member/blog">Blog Details</a></li>
 								</ul></li>
-							<li><a href="./blog.html">Blog</a></li>
-							<li><a href="./contact.html">Contact</a></li>
+							<li><a href="${pageContext.request.contextPath }/member/blog">Blog</a></li>
+							<li><a href="${pageContext.request.contextPath }/member/contact">Contact</a></li>
 						</ul>
 					</nav>
 				</div>

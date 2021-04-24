@@ -23,7 +23,7 @@ public class CategoryeEditController extends HttpServlet {
 		String id = req.getParameter("id");
 		Category category = cateService.get(Integer.parseInt(id));
 		req.setAttribute("category", category);
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/category/edit-category.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/view/edit-category.jsp");
 		dispatcher.forward(req, resp);
 	}
 
@@ -31,7 +31,7 @@ public class CategoryeEditController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Category category = new Category();
 		category.setId(Integer.parseInt(req.getParameter("id")));
-		category.setName(req.getParameter("name"));
+		category.setName(req.getParameter("namee"));
 		cateService.edit(category);
 		resp.sendRedirect(req.getContextPath() + "/admin/category/list");
 

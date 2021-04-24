@@ -7,7 +7,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Order Management</title>
+<title>Voucher Management</title>
 <!-- BOOTSTRAP STYLES-->
 <link href="${url}/css/bootstrap.css" rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->
@@ -35,7 +35,7 @@
 			<div id="page-inner">
 				<div class="row">
 					<div class="col-md-12">
-						<h2>Order Management</h2>
+						<h2>Voucher Management</h2>
 
 
 					</div>
@@ -56,13 +56,8 @@
 											<tr>
 												<th>Index</th>
 												<th>ID</th>
-												<th>Buyer</th>
-												<th>Email</th>
-												<th>Date</th>
-												<th>Product</th>
-												<th>Quantity</th>
-												<th>Price</th>
-												<th>Sum</th>
+												<th>Code</th>
+												<th>Discount</th>
 												<th>Action</th>
 
 
@@ -71,23 +66,23 @@
 										<tbody>
 											</a>
 											<c:set var="index" value="${0}" />
-											<c:forEach items="${listCartItem }" var="list">
+											<c:forEach items="${voucherList }" var="list">
 												<tr class="odd gradeX">
 													<c:set var="index" value="${index + 1}" />
 													<td>${index }</td>
 													<td>${list.id }</td>
-													<td>${list.cart.buyer.username }</td>
-													<td>${list.cart.buyer.email }</td>
-													<td>${list.cart.buyDate }</td>
-													<td>${list.product.name }</td>
-													<td>${list.quantity }</td>
-													<td>$ ${list.product.price }</td>
-													<td>$ ${ list.quantity * list.product.price }</td>
+													<td>${list.code }</td>
+													<td>${list.discount }</td>
 
 
-													<td><a
-														href="<c:url value='/admin/order/delete?id=${list.id }'/>"
-														class="center">Delete</a></td>
+													<td>
+														<a
+														href="<c:url value='/admin/voucher/edit?id=${list.id }'/>"
+														class="center">Edit</a>
+														|<a
+														href="<c:url value='/admin/voucher/delete?id=${list.id }'/>"
+														class="center">Delete</a>
+														</td>
 
 												</tr>
 											</c:forEach>

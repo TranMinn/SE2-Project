@@ -32,6 +32,7 @@ public class CartAddController extends HttpServlet {
 		cartItem.setProduct(product);
 		HttpSession httpSession = req.getSession();
 		Object obj = httpSession.getAttribute("cart");
+		
 		if (obj == null) {
 			Map<Integer, CartItem> map = new HashMap<Integer, CartItem>();
 			map.put(cartItem.getProduct().getId(), cartItem);
