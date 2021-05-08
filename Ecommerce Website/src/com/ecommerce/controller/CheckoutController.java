@@ -43,7 +43,7 @@ public class CheckoutController extends HttpServlet {
 
 		Object objCart = session.getAttribute("cart");
 		if (objCart != null) {
-			// ep ve dung kieu cua no khi them vao o phan them vao gio hang controller
+
 			@SuppressWarnings("unchecked")
 			Map<Integer, CartItem> map = (Map<Integer, CartItem>) objCart;
 
